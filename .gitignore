@@ -43,6 +43,4 @@ hs_err_pid*
 .idea/misc.xml
 .idea/sonarlint/
 .idea/vcs.xml
-BlogCode.iml
-Tools/
-pom.xml
+*.iml
