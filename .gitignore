@@ -43,3 +43,10 @@ hs_err_pid*
 .idea/misc.xml
 .idea/sonarlint/
 .idea/vcs.xml
+/filter-interceptor/.mvn/wrapper/maven-wrapper.jar
+/filter-interceptor/.mvn/wrapper/maven-wrapper.properties
+/filter-interceptor/.mvn/wrapper/MavenWrapperDownloader.java
+/filter-interceptor/mvnw.cmd
+/filter-interceptor/mvnw
+/filter-interceptor/.mvn/wrapper/maven-wrapper.jar
+/filter-interceptor/.gitignore
