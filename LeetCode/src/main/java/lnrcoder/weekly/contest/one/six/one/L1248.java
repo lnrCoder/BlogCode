@@ -56,7 +56,6 @@ public class L1248 {
             result = result + beforeCountList.get(i) * beforeCountList.get(i + k);
         }
 
-
         return result;
     }
 
