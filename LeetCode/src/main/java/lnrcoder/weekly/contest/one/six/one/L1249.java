@@ -46,6 +46,7 @@ public class L1249 {
         }
 
         StringBuilder stringBuilder = new StringBuilder();
+
         for (char aChar : chars) {
             if (aChar != '-') {
                 stringBuilder.append(aChar);
