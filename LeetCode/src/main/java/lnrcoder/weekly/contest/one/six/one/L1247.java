@@ -40,14 +40,12 @@ public class L1247 {
         }
 
         if ((xCount + yCount) % 2 == 0) {
-
             int result = xCount / 2 + yCount / 2;
             if (xCount % 2 == 1) {
                 return result + 2;
             } else {
                 return result;
             }
-
         } else {
             return -1;
         }
