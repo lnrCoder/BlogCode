@@ -32,6 +32,8 @@ public class L1255 {
      * 来源：力扣（LeetCode）
      * 链接：https://leetcode-cn.com/problems/maximum-score-words-formed-by-letters
      * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+     *
+     * 解答方式来自 LeetCode Java 的最速解答。无法查看具体答题者，特此说明。
      */
     public static int maxScoreWords(String[] words, char[] letters, int[] score) {
         int[] scoreOfWords = new int[words.length];
@@ -42,7 +44,6 @@ public class L1255 {
             }
             scoreOfWords[i] = count;
         }
-        int ans = 0;
         int[] manzu = new int[26];
         for (int i = 0; i < letters.length; i++) {
             manzu[letters[i] - 97]++;
