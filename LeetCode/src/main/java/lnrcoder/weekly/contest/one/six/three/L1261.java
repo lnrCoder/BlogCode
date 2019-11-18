@@ -8,4 +8,5 @@ package lnrcoder.weekly.contest.one.six.three;
  */
 public class L1261 {
 
+
 }
