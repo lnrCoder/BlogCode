@@ -13,6 +13,7 @@ public class L1261 {
     HashSet<Integer> set;
 
     public L1261(TreeNode root) {
+        set = new HashSet<>();
         dfs(root, 0);
     }
 
