@@ -85,10 +85,10 @@ public class L1262 {
         }
         int ans = 0;
         int min = -1;
-        for (int i = 0; i < n; i++) {
-            if (nums[i] % 3 == sum % 3) {
-                if (min == -1 || min > nums[i]) {
-                    min = nums[i];
+        for (int value : nums) {
+            if (value % 3 == sum % 3) {
+                if (min == -1 || min > value) {
+                    min = value;
                 }
             }
         }
@@ -97,17 +97,17 @@ public class L1262 {
         }
         min = -1;
         int min2 = -1;
-        for (int i = 0; i < n; i++) {
-            if (nums[i] % 3 != 0 && nums[i] % 3 != sum % 3) {
+        for (int num : nums) {
+            if (num % 3 != 0 && num % 3 != sum % 3) {
                 if (min == -1) {
-                    min = nums[i];
+                    min = num;
                 } else if (min2 == -1) {
-                    min2 = nums[i];
+                    min2 = num;
                 } else {
                     int t = Math.max(min, min2);
-                    if (t > nums[i]) {
+                    if (t > num) {
                         min = Math.min(min, min2);
-                        min2 = nums[i];
+                        min2 = num;
                     }
                 }
             }
@@ -126,23 +126,23 @@ public class L1262 {
         int num21 = Integer.MAX_VALUE;
         int num22 = Integer.MAX_VALUE;
 
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] % 3 == 1) {
-                if (nums[i] <= num11) {
+        for (int num : nums) {
+            if (num % 3 == 1) {
+                if (num <= num11) {
                     num12 = num11;
-                    num11 = nums[i];
-                } else if (nums[i] < num12) {
-                    num12 = nums[i];
+                    num11 = num;
+                } else if (num < num12) {
+                    num12 = num;
                 }
-            } else if (nums[i] % 3 == 2) {
-                if (nums[i] <= num21) {
+            } else if (num % 3 == 2) {
+                if (num <= num21) {
                     num22 = num21;
-                    num21 = nums[i];
-                } else if (nums[i] < num22) {
-                    num22 = nums[i];
+                    num21 = num;
+                } else if (num < num22) {
+                    num22 = num;
                 }
             }
-            sum += nums[i];
+            sum += num;
         }
         int res = 0;
         if (sum % 3 == 0) {
