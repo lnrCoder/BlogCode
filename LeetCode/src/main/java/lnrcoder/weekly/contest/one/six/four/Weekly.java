@@ -25,7 +25,6 @@ public class Weekly {
 
         System.out.println("weekly.countServers(grid) = " + weekly.countServers(grid));
 
-
         String[] products = new String[]{"mobile","mouse","moneypot","monitor","mousepad"};
         String searchWord = "mouse";
 
