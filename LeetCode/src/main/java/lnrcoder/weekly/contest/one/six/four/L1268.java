@@ -22,37 +22,30 @@ public class L1268 {
 
     public List<List<String>> suggestedProducts(String[] products, String searchWord) {
         List<List<String>> result = new ArrayList<>(searchWord.length());
-
         List<String> list = new ArrayList<>(products.length);
         Arrays.sort(products);
 
         char first = searchWord.toCharArray()[0];
-
         for (String product : products) {
             if (product.toCharArray()[0] == first) {
                 list.add(product);
             }
         }
-
         for (int i = 0; i < searchWord.length(); i++) {
             List<String> l = new ArrayList<>();
             list = search(list, searchWord, i);
 
             int size = list.size();
-
             for (int j = 0; j < Math.min(size, 3); j++) {
                 l.add(list.get(j));
             }
-
             result.add(l);
         }
         return result;
     }
 
     public List<String> search(List<String> products, String searchWord, int x) {
-
         List<String> list = new ArrayList<>();
-
         for (String product : products) {
             if (product.toCharArray().length > x && product.toCharArray()[x] == searchWord
                     .toCharArray()[x]) {
