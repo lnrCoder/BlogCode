@@ -37,6 +37,8 @@ public class Weekly {
 
             }
         }
+
+        return 1;
     }
 
     public String tictactoe(int[][] moves) {
