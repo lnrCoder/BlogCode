@@ -42,15 +42,12 @@ public class Weekly {
     }
 
     public String tictactoe(int[][] moves) {
-        boolean flagA = true;
-
         int[] A = new int[8];
         int[] B = new int[8];
         Arrays.fill(B, 0);
         Arrays.fill(A, 0);
         int index = 0;
         for (int[] move : moves) {
-
             if ((index & 1) == 0) {
                 if (move[0] == move[1]) {
                     A[7]++;
@@ -69,7 +66,6 @@ public class Weekly {
                         && move[1] == 0)) {
                     B[6]++;
                 }
-
                 B[move[0]]++;
                 B[move[1] + 3]++;
             }
