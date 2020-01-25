@@ -1,4 +1,4 @@
-﻿package lnrcoder.singleton;
+package lnrcoder.singleton;
 
 /**
  * 推荐:实现了线程安全又避免了同步带来的性能影响
