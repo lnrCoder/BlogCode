@@ -11,50 +11,41 @@ public class MyThreadNotify {
     public static Object resource = new Object();
 
     public static void main(String[] args) throws InterruptedException {
-        Thread threadA = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                synchronized (resource) {
-                    System.out.println(" threadA get resource lock ");
-                    try {
-                        System.out.println(" threadA begin wait ");
-                        resource.wait();
-                        System.out.println(" threadA end wait ");
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+        Thread threadA = new Thread(() -> {
+            synchronized (resource) {
+                System.out.println(" threadA get resource lock ");
+                try {
+                    System.out.println(" threadA begin wait ");
+                    resource.wait();
+                    System.out.println(" threadA end wait ");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
         });
 
-        Thread threadB = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                synchronized (resource) {
-                    System.out.println(" threadB get resource lock ");
-                    try {
-                        System.out.println(" threadB begin wait ");
-                        resource.wait();
-                        System.out.println(" threadB end wait ");
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+        Thread threadB = new Thread(() -> {
+            synchronized (resource) {
+                System.out.println(" threadB get resource lock ");
+                try {
+                    System.out.println(" threadB begin wait ");
+                    resource.wait();
+                    System.out.println(" threadB end wait ");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
         });
 
-        Thread threadC = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                synchronized (resource) {
+        Thread threadC = new Thread(() -> {
+            synchronized (resource) {
 //                    System.out.println(" threadC begin notify ");
 //                    resource.notify();
 //                    System.out.println(" threadC end notify ");
 
-                    System.out.println(" threadC begin notifyAll ");
-                    resource.notifyAll();
-                    System.out.println(" threadC end notifyAll ");
-                }
+                System.out.println(" threadC begin notifyAll ");
+                resource.notifyAll();
+                System.out.println(" threadC end notifyAll ");
             }
         });
 
