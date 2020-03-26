@@ -12,12 +12,15 @@ import java.util.concurrent.FutureTask;
 public class MyThread {
 
     public static void main(String[] args) {
+        // 继承 Thread
         TestThread thread = new TestThread();
         thread.start();
 
-        TestRunable testRunable = new TestRunable();
-        testRunable.run();
+        // 实现 Runnable 接口
+        TestRunable testRunnable = new TestRunable();
+        testRunnable.run();
 
+        // 通过 FutureTask 异步调用实现了 Callable 接口的类
         FutureTask<String> testFuture = new FutureTask<>(new CallerTask());
         new Thread(testFuture).start();
         try {
