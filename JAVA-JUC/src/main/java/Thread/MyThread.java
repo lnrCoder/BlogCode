@@ -5,7 +5,7 @@ import java.util.concurrent.FutureTask;
 
 /**
  * @ClassName: MyThread
- * @Description:
+ * @Description: 线程的创建与运行
  * @Author: LiaNg
  * @Date: 2020/3/26 22:03
  */
