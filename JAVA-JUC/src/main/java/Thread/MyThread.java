@@ -31,7 +31,7 @@ public class MyThread {
     }
 
     /**
-     * 方式一： 通过 Thread 类
+     * 方式一： 继承 Thread 类
      */
     public static class TestThread extends Thread {
         @Override
@@ -41,7 +41,7 @@ public class MyThread {
     }
 
     /**
-     * 方式二： 通过实现 Runnable 接口
+     * 方式二： 实现 Runnable 接口
      */
     public static class TestRunable implements Runnable {
         @Override
@@ -51,7 +51,7 @@ public class MyThread {
     }
 
     /**
-     * 方式三： 通过 FutureTask 异步调用
+     * 方式三：实现 Callable 接口，通过FutureTask 异步调用
      */
     public static class CallerTask implements Callable<String> {
         @Override
